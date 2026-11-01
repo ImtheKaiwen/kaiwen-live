@@ -4,13 +4,13 @@
 > **Belge:** `kaiwen-live/docs/ARCHITECTURE.md`  
 > **Sahip:** Kaiwen Live; Speech'in model/codec algoritmalarını değiştirme yetkisi yoktur.  
 > **Ana hedef:** Türkçe, yerel, speech-native, doğal ve düşük gecikmeli konuşma; ilk dikey dilimde tek kullanıcı, tek Windows cihazı, güvenilir turn-based gerçek ses.  
-> **Temel kaynaklar:** [Live README](../README.md), [Live AGENTS](../AGENTS.md), [Workspace Integration](../../docs/INTEGRATION.md), [Speech Streaming](../../kaiwen-speech/docs/STREAMING.md), [Speech API](../../kaiwen-speech/docs/API.md), [Forge Registry](../../kaiwen-forge/docs/MODEL_REGISTRY.md).
+> **Temel kaynaklar:** [Live README](../README.md), [Live AGENTS](../AGENTS.md), [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md), [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md), [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md), [Forge Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md).
 
 ---
 
 ## 1. Belgenin yetkisi, kapsamı ve statü sözlüğü
 
-Bu belge, Kaiwen Live'ın gelecekte yazılacak **uygulama mimarisini**, süreçler arası kontrol ve ses akışını, güvenlik sınırlarını, donanım yaşam döngüsünü, zamanlama ve senkronizasyon modelini ve başarının nasıl doğrulanacağını tanımlar. Ürün davranışına ilişkin kararlar [README](../README.md), Codex/ajan çalışma kuralları [AGENTS.md](../AGENTS.md), konuşma modelinin iç streaming sözleşmesi [Speech Streaming](../../kaiwen-speech/docs/STREAMING.md) içindedir. Burada amaç onları tekrar etmek değil, modülleri birbiriyle uyumlu **uygulanabilir interface ve durum makinelerine** bağlamaktır.
+Bu belge, Kaiwen Live'ın gelecekte yazılacak **uygulama mimarisini**, süreçler arası kontrol ve ses akışını, güvenlik sınırlarını, donanım yaşam döngüsünü, zamanlama ve senkronizasyon modelini ve başarının nasıl doğrulanacağını tanımlar. Ürün davranışına ilişkin kararlar [README](../README.md), Codex/ajan çalışma kuralları [AGENTS.md](../AGENTS.md), konuşma modelinin iç streaming sözleşmesi [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md) içindedir. Burada amaç onları tekrar etmek değil, modülleri birbiriyle uyumlu **uygulanabilir interface ve durum makinelerine** bağlamaktır.
 
 Belgede üç statü kullanılır:
 
@@ -393,7 +393,7 @@ Bu şema okunabilir bir özet, **tam transition tablosu** şu şekildedir:
 
 ## 13. Wire protocol: sürümleme ve kontrol düzlemi
 
-Ortak [Integration](../../docs/INTEGRATION.md) adı `kaiwen.live.session`, önerilen başlangıç sürümü `1.0.0`'dır. **Henüz sahada çalışan protocol implementation yoktur.** Her iki uçtaki contract dosyası, onaylı tek schema'dan üretilir veya iki dilli fixture testleriyle eşleşir. Schema'ların TS ve Python'da bağımsız sürüklenmesine izin verilmez.
+Ortak [Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md) adı `kaiwen.live.session`, önerilen başlangıç sürümü `1.0.0`'dır. **Henüz sahada çalışan protocol implementation yoktur.** Her iki uçtaki contract dosyası, onaylı tek schema'dan üretilir veya iki dilli fixture testleriyle eşleşir. Schema'ların TS ve Python'da bağımsız sürüklenmesine izin verilmez.
 
 ### 13.1 Mesaj envelope örneği — HEDEF, çalışmayan fixture
 
@@ -573,7 +573,7 @@ User presses Stop    Main              Playback            Sidecar/Speech
        │◄──stopped──────┤                   │                      │
 ```
 
-Bu çizim, gerçek Windows callback timing veya garantili örnek-örnek sessizlik iddiası değildir. Uygulamanın durdurma sonrası hoparlör tamponunu kaç ms'de boşalttığı gerçek cihazda ölçülür. Hedef performans sınırları [Speech Performance](../../kaiwen-speech/docs/PERFORMANCE.md) ve Live test raporunda deneysel olarak belirlenir.
+Bu çizim, gerçek Windows callback timing veya garantili örnek-örnek sessizlik iddiası değildir. Uygulamanın durdurma sonrası hoparlör tamponunu kaç ms'de boşalttığı gerçek cihazda ölçülür. Hedef performans sınırları [Speech Performance](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/PERFORMANCE.md) ve Live test raporunda deneysel olarak belirlenir.
 
 ### 15.4 Race testleri
 
@@ -650,7 +650,7 @@ class SpeechRuntimeAdapter(Protocol):
     async def close(self) -> None: ...
 ```
 
-**Bu `Protocol` Live'da henüz yoktur.** Nihai API, Speech [API.md](../../kaiwen-speech/docs/API.md) ile birlikte stabilize edilir. `stream` metodu ancak Speech native stream implementation tamamlanınca capability olarak açılır. Python `async def` içine doğrudan senkron ağır model kodu koymak event loop'u bloke edebilir; inference ayrı worker/thread/process veya ölçülmüş doğru concurrency düzeni gerektirir. Cancellation için PyTorch kernel'lerinin preempt edilebildiği iddia edilmez; next safe boundary ve timeout belirlenir.
+**Bu `Protocol` Live'da henüz yoktur.** Nihai API, Speech [API.md](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md) ile birlikte stabilize edilir. `stream` metodu ancak Speech native stream implementation tamamlanınca capability olarak açılır. Python `async def` içine doğrudan senkron ağır model kodu koymak event loop'u bloke edebilir; inference ayrı worker/thread/process veya ölçülmüş doğru concurrency düzeni gerektirir. Cancellation için PyTorch kernel'lerinin preempt edilebildiği iddia edilmez; next safe boundary ve timeout belirlenir.
 
 ### 16.4 Model çıktısının doğrulanması
 
@@ -869,7 +869,7 @@ Hız için birden çok farklı saat noktası bulunur. Bunlar birbirine karışt�
 
 ### 23.2 UI performansıyla ses performansı ayrılır
 
-Renderer FPS, React commit latency, waveform çizimi; `audio_callback_p99_ms`, `ipc_p95_ms`, `playback_underruns` ve GPU inference metriklerinden ayrıdır. UI 60 FPS'e çıkarken mikrofon sample drop yükselirse bu başarı değildir. Live [Speech Performance](../../kaiwen-speech/docs/PERFORMANCE.md) sözlüğüne uyumlu ölçümler yapar, fakat donanım duyulan ilk ses metriğinin sahibidir.
+Renderer FPS, React commit latency, waveform çizimi; `audio_callback_p99_ms`, `ipc_p95_ms`, `playback_underruns` ve GPU inference metriklerinden ayrıdır. UI 60 FPS'e çıkarken mikrofon sample drop yükselirse bu başarı değildir. Live [Speech Performance](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/PERFORMANCE.md) sözlüğüne uyumlu ölçümler yapar, fakat donanım duyulan ilk ses metriğinin sahibidir.
 
 ### 23.3 VRAM ölçüm koşulları
 
@@ -1221,15 +1221,15 @@ Bu listedeki **doküman yazımı** yalnız tasarım kapısıdır. Test/uygulama 
 
 - [Live README](../README.md): Ürün amacı, çalışma profilleri, kullanıcı kurulum ve başlangıç sırası.
 - [Live AGENTS](../AGENTS.md): Codex için güvenlik, test, davranış, PR ve rapor kuralları.
-- [Workspace Overview](../../docs/OVERVIEW.md): Altı depo ekosisteminin vizyonu ve sahipliği.
-- [Workspace Integration](../../docs/INTEGRATION.md): Cross-repo manifest/IPC/veri sözleşmeleri.
-- [Engineering Standards](../../docs/ENGINEERING_STANDARDS.md): Kod, sürüm, test ve release standartları.
-- [Workspace Roadmap](../../docs/ROADMAP.md): Bağımlılıkların sıralanması ve dikey dilimler.
-- [Speech Streaming](../../kaiwen-speech/docs/STREAMING.md): Codec ve Transformer'ın gerçek artımlı streaming tasarımı.
-- [Speech API](../../kaiwen-speech/docs/API.md): SDK facade, batch/stream arayüzleri ve runtime yetenekleri.
-- [Speech Performance](../../kaiwen-speech/docs/PERFORMANCE.md): Gerçek benchmark/VRAM ölçüm sözlüğü ve testleri.
-- [Forge Registry](../../kaiwen-forge/docs/MODEL_REGISTRY.md): Kanonik yayın, model/codec compatibility, rollback.
-- [Forge Evaluation](../../kaiwen-forge/docs/EVALUATION.md): Bilimsel model kalite ve değerlendirme kanıtları.
+- [Workspace Overview](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/OVERVIEW.md): Altı depo ekosisteminin vizyonu ve sahipliği.
+- [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md): Cross-repo manifest/IPC/veri sözleşmeleri.
+- [Engineering Standards](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ENGINEERING_STANDARDS.md): Kod, sürüm, test ve release standartları.
+- [Workspace Roadmap](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ROADMAP.md): Bağımlılıkların sıralanması ve dikey dilimler.
+- [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md): Codec ve Transformer'ın gerçek artımlı streaming tasarımı.
+- [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md): SDK facade, batch/stream arayüzleri ve runtime yetenekleri.
+- [Speech Performance](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/PERFORMANCE.md): Gerçek benchmark/VRAM ölçüm sözlüğü ve testleri.
+- [Forge Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md): Kanonik yayın, model/codec compatibility, rollback.
+- [Forge Evaluation](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/EVALUATION.md): Bilimsel model kalite ve değerlendirme kanıtları.
 - [Design System](https://github.com/ImtheKaiwen/kaiwen-design): UI component/tasarım sorumluluğu.
 - [Agent](https://github.com/ImtheKaiwen/kaiwen-agent): Opsiyonel araç/izin sistemi; entegrasyon çekirdeğe bağlı değil.
 

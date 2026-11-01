@@ -6,7 +6,7 @@
 > **Durum:** **HEDEF / HENÜZ UYGULANMADI.** GitHub `kaiwen-live` reposunda 30 Ekim 2026 itibarıyla yalnız başlangıç README'si doğrulanmıştır. Bu dosya kodun, tasarımın veya gerçek sesli demoların hazır olduğunu iddia etmez.  
 > **Kapsam:** Windows masaüstü, tek yerel kullanıcı, Türkçe sesli görüşme, local-first. İlk dikey dilim gerçek cihazda çalışan turn-based ses, sonra native streaming.  
 > **Sahiplik:** Live kullanıcı deneyimine ve ses aygıtları arayüzüne sahiptir; Speech model/codec, Forge model yayını, Design ortak UI, Agent opsiyonel araç kullanımından sorumludur.  
-> **Teknik referanslar:** [Live README](../README.md) · [Live AGENTS](../AGENTS.md) · [Live Architecture](ARCHITECTURE.md) · [Workspace Integration](../../docs/INTEGRATION.md) · [Speech API](../../kaiwen-speech/docs/API.md) · [Speech Streaming](../../kaiwen-speech/docs/STREAMING.md) · [Forge Registry](../../kaiwen-forge/docs/MODEL_REGISTRY.md) · [Kaiwen Design](https://github.com/ImtheKaiwen/kaiwen-design).
+> **Teknik referanslar:** [Live README](../README.md) · [Live AGENTS](../AGENTS.md) · [Live Architecture](ARCHITECTURE.md) · [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md) · [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md) · [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md) · [Forge Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md) · [Kaiwen Design](https://github.com/ImtheKaiwen/kaiwen-design).
 
 ---
 
@@ -284,7 +284,7 @@ Bu tablo görünür metnin **yalnız genel session state'ten türetilmesini** da
 
 ## 10. Görsel session state machine ve event kaynakları
 
-Backend session durumları [Architecture](ARCHITECTURE.md) ve [Workspace Integration](../../docs/INTEGRATION.md) ile eşleştirilir. Görünür UI state, event'lerin sığınağı olan tek bir reducer/store tarafından türetilmelidir. Component'ler kendi başına `setIsListening(true)` yaparak gerçekliği uyduramaz.
+Backend session durumları [Architecture](ARCHITECTURE.md) ve [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md) ile eşleştirilir. Görünür UI state, event'lerin sığınağı olan tek bir reducer/store tarafından türetilmelidir. Component'ler kendi başına `setIsListening(true)` yaparak gerçekliği uyduramaz.
 
 **Hedef görünüm modeli** (tipler uygulama içi örnek, mevcut Live kodu değildir):
 
@@ -355,7 +355,7 @@ export interface LiveViewState {
 }
 ```
 
-Bu JSON örneği **tasarlanan olay biçimidir**, gerçek uygulamadan yakalanmış olay değildir. `stream_id`, `sequence` ve monotonic clock alanları belirtilen [Integration](../../docs/INTEGRATION.md) sözleşmesine uyar. Gerçek üretimde duvar saati ve monotonic zaman farklı amaçlara hizmet eder; süre hesabında uygun monotonic referanslar kullanılmalıdır.
+Bu JSON örneği **tasarlanan olay biçimidir**, gerçek uygulamadan yakalanmış olay değildir. `stream_id`, `sequence` ve monotonic clock alanları belirtilen [Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md) sözleşmesine uyar. Gerçek üretimde duvar saati ve monotonic zaman farklı amaçlara hizmet eder; süre hesabında uygun monotonic referanslar kullanılmalıdır.
 
 ## 11. İlk çalıştırma / onboarding
 
@@ -829,7 +829,7 @@ Aşamaların sonunda yalnız screenshot veya kod satırı sayısı değil, **ger
 
 ## 34. Codex/Agent için görev uygulama ve raporlama protokolü
 
-Her yeni UX görevi başında önce [Live AGENTS](../AGENTS.md), [Architecture](ARCHITECTURE.md), [Speech API](../../kaiwen-speech/docs/API.md) ve ilgili Design component'inin gerçek TS tipini oku. Mevcut olmayan import, hayalî event veya çalışmayan mock SDK üretme. Hedef özellik küçük, doğrulanabilir tek PR'lara bölünmelidir.
+Her yeni UX görevi başında önce [Live AGENTS](../AGENTS.md), [Architecture](ARCHITECTURE.md), [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md) ve ilgili Design component'inin gerçek TS tipini oku. Mevcut olmayan import, hayalî event veya çalışmayan mock SDK üretme. Hedef özellik küçük, doğrulanabilir tek PR'lara bölünmelidir.
 
 **Her PR raporunda:**
 
@@ -976,7 +976,7 @@ Bu kararlar **tasarım önerisi** niteliğindedir. Kullanıcı testi ve çalış
 
 **Bu repoda:** [README](../README.md), [AGENTS](../AGENTS.md), [ARCHITECTURE](ARCHITECTURE.md). Sıradaki belge `AGENT_INTEGRATION.md` ileride, opsiyonel Agent çağrılarının izin, metin→ses ve araç sonuçlarından konuşmaya dönüş sözleşmesini tanımlayacaktır.
 
-**Kardeş repolarda:** [Speech API](../../kaiwen-speech/docs/API.md), [Speech Streaming](../../kaiwen-speech/docs/STREAMING.md), [Forge Registry](../../kaiwen-forge/docs/MODEL_REGISTRY.md), [Workspace Integration](../../docs/INTEGRATION.md), [Engineering Standards](../../docs/ENGINEERING_STANDARDS.md), [Kaiwen Design GitHub](https://github.com/ImtheKaiwen/kaiwen-design), [Design Language](https://github.com/ImtheKaiwen/kaiwen-design/blob/main/docs/DESIGN_LANGUAGE.md), [Design Component Contract](https://github.com/ImtheKaiwen/kaiwen-design/blob/main/docs/COMPONENT_CONTRACT.md).
+**Kardeş repolarda:** [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md), [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md), [Forge Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md), [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md), [Engineering Standards](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ENGINEERING_STANDARDS.md), [Kaiwen Design GitHub](https://github.com/ImtheKaiwen/kaiwen-design), [Design Language](https://github.com/ImtheKaiwen/kaiwen-design/blob/main/docs/DESIGN_LANGUAGE.md), [Design Component Contract](https://github.com/ImtheKaiwen/kaiwen-design/blob/main/docs/COMPONENT_CONTRACT.md).
 
 **Çelişki çözümü:** Ortak public protokol/codec yükleme için ilgili repo'nun kod ve sürümlü sözleşmesi; kullanıcıya görünen copy/etkileşim için bu dosya; generative coding kuralları için `AGENTS.md`; görsel token/component API için Design paketinin gerçek TypeScript tipleri kaynak kabul edilir. Bu kaynaklar çelişirse varsayımla ilerlemek yerine ADR veya küçük eşzamanlı belge düzeltmesi yap, gerçek kod entegrasyonundan önce contract test ekle.
 

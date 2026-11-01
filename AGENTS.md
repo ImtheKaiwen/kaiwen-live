@@ -11,7 +11,7 @@
 
 ## 0. Okuma ve talimat önceliği
 
-Kodlama ajanı herhangi bir dosyayı oluşturmadan veya düzenlemeden önce şu bağlamı okumalıdır: [Live README](README.md), [Workspace Integration](../docs/INTEGRATION.md), [Engineering Standards](../docs/ENGINEERING_STANDARDS.md), [Speech Streaming](../kaiwen-speech/docs/STREAMING.md), [Speech API](../kaiwen-speech/docs/API.md), [Speech Performance](../kaiwen-speech/docs/PERFORMANCE.md), [Forge Registry](../kaiwen-forge/docs/MODEL_REGISTRY.md). Gereken konularda [Workspace Roadmap](../docs/ROADMAP.md), [Workspace Overview](../docs/OVERVIEW.md), [Corpus Export Contract](../kaiwen-corpus/docs/EXPORT_CONTRACT.md) ve [Forge AGENTS](../kaiwen-forge/AGENTS.md) okunur.
+Kodlama ajanı herhangi bir dosyayı oluşturmadan veya düzenlemeden önce şu bağlamı okumalıdır: [Live README](README.md), [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md), [Engineering Standards](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ENGINEERING_STANDARDS.md), [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md), [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md), [Speech Performance](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/PERFORMANCE.md), [Forge Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md). Gereken konularda [Workspace Roadmap](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ROADMAP.md), [Workspace Overview](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/OVERVIEW.md), [Corpus Export Contract](https://github.com/ImtheKaiwen/kaiwen-corpus/blob/3416d57ce0815af0cb8357c6727cd4ba889bd46d/docs/EXPORT_CONTRACT.md) ve [Forge AGENTS](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/AGENTS.md) okunur.
 
 Yetki ve gerçeğin kaynağı sırası: **kullanıcının mevcut görev kapsamı → doğrulanmış çalışan kod/test ve gerçek paket/driver durumu → sürümlü üretici sözleşmesi → bu AGENTS.md → README'deki hedefler → öneri/araştırma notları**. Bu sıra güvenlik gerekliliklerini geçersiz kılmaz. Bir çatışma görüldüğünde gizlice karar verilmez; dosya, sembol, sürüm, etki ve önerilen çözüm raporlanır. Tek taraflı `package.json` değiştirmek veya sahte bir `SpeechEngine` API'sini gerçekmiş gibi import etmek yasaktır.
 
@@ -819,12 +819,12 @@ Bu liste **gelecekteki ürün kabul koşullarıdır**; bugünkü tamamlanmış i
 - `docs/ARCHITECTURE.md`: sıradaki dosya; sidecar, OS ses sürücüsü, transport, session ve lifecycle mimarisi.
 - `docs/DESIGN_AND_UX.md`: sonraki dosya; görsel akış, erişilebilirlik, tema ve ekranlar.
 - `docs/AGENT_INTEGRATION.md`: sonraki dosya; araç yönlendirme, izin, Agent görevleri ve sesli yanıt problemi.
-- [Workspace Integration](../docs/INTEGRATION.md): cross-repo wire protocol ve sorumluluk sınırları.
-- [Speech API](../kaiwen-speech/docs/API.md): mevcut Python API ve hedef session SDK.
-- [Speech Streaming](../kaiwen-speech/docs/STREAMING.md): KV cache, codec state ve streaming parity.
-- [Speech Performance](../kaiwen-speech/docs/PERFORMANCE.md): cihaz, gecikme ve VRAM doğrulama metodu.
-- [Forge Registry](../kaiwen-forge/docs/MODEL_REGISTRY.md): release manifest, trust ve rollback.
-- [Engineering Standards](../docs/ENGINEERING_STANDARDS.md): çapraz proje güvenlik/kalite kuralları.
-- [Workspace Roadmap](../docs/ROADMAP.md): milestone koordinasyonu ve öncelik.
+- [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md): cross-repo wire protocol ve sorumluluk sınırları.
+- [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md): mevcut Python API ve hedef session SDK.
+- [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md): KV cache, codec state ve streaming parity.
+- [Speech Performance](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/PERFORMANCE.md): cihaz, gecikme ve VRAM doğrulama metodu.
+- [Forge Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md): release manifest, trust ve rollback.
+- [Engineering Standards](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ENGINEERING_STANDARDS.md): çapraz proje güvenlik/kalite kuralları.
+- [Workspace Roadmap](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ROADMAP.md): milestone koordinasyonu ve öncelik.
 
 Üretici–tüketici sözleşmeleri çelişirse hangi tarafta gerçek kaynak kodu ve sürümlü şema bulunduğunu bul; yeni belgeyi tek taraflı protocol source of truth ilan etme. **Önce çalışan ses hattını kanıtla; sonra streaming, kalite ve ürün ölçeğini artır.**

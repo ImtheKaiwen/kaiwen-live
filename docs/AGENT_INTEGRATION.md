@@ -5,7 +5,7 @@
 > **Sahip:** Kaiwen Live (ürün entegrasyonu); Kaiwen Agent (model/araç/policy/approval runtime); Kaiwen Speech (speech-native model ve codec).  
 > **İlk teslim:** Türkçe konuşma ana yolunu bozmadan, kullanıcı tarafından açıkça talep edilen **tek güvenli Agent metin isteğinin** yerel Python bridge üzerinden çalıştırılması ve sonucunun Live içinde gösterilmesi.  
 > **Gelişim sırası:** Agent kapalı → test/fake bridge → gerçek text-only chat → izinli read-only action → gerçek approval → job/cancellation → açık TTS/koşullandırma → araştırma niteliğinde öğrenilmiş audio-control token.  
-> **Doğrulanan kaynaklar:** [Live README](../README.md), [Live AGENTS](../AGENTS.md), [Live Architecture](ARCHITECTURE.md), [Live Design & UX](DESIGN_AND_UX.md), [Workspace Integration](../../docs/INTEGRATION.md), [Speech API](../../kaiwen-speech/docs/API.md), [Speech Streaming](../../kaiwen-speech/docs/STREAMING.md), [Forge Model Registry](../../kaiwen-forge/docs/MODEL_REGISTRY.md), [Kaiwen Agent GitHub](https://github.com/ImtheKaiwen/kaiwen-agent).
+> **Doğrulanan kaynaklar:** [Live README](../README.md), [Live AGENTS](../AGENTS.md), [Live Architecture](ARCHITECTURE.md), [Live Design & UX](DESIGN_AND_UX.md), [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md), [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md), [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md), [Forge Model Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md), [Kaiwen Agent GitHub](https://github.com/ImtheKaiwen/kaiwen-agent).
 
 ---
 
@@ -632,7 +632,7 @@ V1 yerel sesli sohbet, mikrofonu açmak için OS izni kullanır. Ses bu izinden 
 
 ### 21.3 Kullanıcı verisinin geri çekilmesi
 
-Kullanıcı bir geçmişi silmek istediğinde UI kayıt/özet geçmişi, Agent memory, local transcript, cache ve ilgili audio artifact arasındaki farkı açık tutar. Bazı audit kayıtları mevzuat veya güvenlik amacıyla sınırlı tutulabilir; silme sözünü teknik olarak gerçekleştiremiyorsak dürüstçe açıklanır. Eğitim Corpus hattına otomatik veri aktarımı yapılmaz; kullanıcı opt-in olsa bile [Corpus Governance](../../kaiwen-corpus/docs/DATA_GOVERNANCE.md) lisans/izin ve dataset export sözleşmeleri geçerlidir.
+Kullanıcı bir geçmişi silmek istediğinde UI kayıt/özet geçmişi, Agent memory, local transcript, cache ve ilgili audio artifact arasındaki farkı açık tutar. Bazı audit kayıtları mevzuat veya güvenlik amacıyla sınırlı tutulabilir; silme sözünü teknik olarak gerçekleştiremiyorsak dürüstçe açıklanır. Eğitim Corpus hattına otomatik veri aktarımı yapılmaz; kullanıcı opt-in olsa bile [Corpus Governance](https://github.com/ImtheKaiwen/kaiwen-corpus/blob/3416d57ce0815af0cb8357c6727cd4ba889bd46d/docs/DATA_GOVERNANCE.md) lisans/izin ve dataset export sözleşmeleri geçerlidir.
 
 ## 22. Kaynak gösterimi, güvenilirlik ve kullanıcının bilgi ihtiyacı
 
@@ -997,14 +997,14 @@ Aşağıdaki belge ve kod kaynakları uygulama öncesi okunur. Yerel bağlantıl
 2. [Kaiwen Live AGENTS](../AGENTS.md) — Codex kuralları, süreç ve test teslim standardı.
 3. [Live Architecture](ARCHITECTURE.md) — sidecar IPC, PCM, session epoch ve interruption.
 4. [Live Design and UX](DESIGN_AND_UX.md) — durum kartları, onay, mikrofon ve seslendirme.
-5. [Workspace Integration](../../docs/INTEGRATION.md) — ortak JSON event envelope ve cross-repo sınırı.
-6. [Workspace Engineering Standards](../../docs/ENGINEERING_STANDARDS.md) — sürüm, test, dokümantasyon, güvenlik.
-7. [Workspace Roadmap](../../docs/ROADMAP.md) — özellikleri gereksiz genişletmeyen gelişim sırası.
-8. [Speech API](../../kaiwen-speech/docs/API.md) — bugün mevcut `kaiwen_voice` ile hedef Speech SDK arasındaki sınır.
-9. [Speech Streaming](../../kaiwen-speech/docs/STREAMING.md) — playback stop, cancellation, turn/generation kimliği.
-10. [Speech Performance](../../kaiwen-speech/docs/PERFORMANCE.md) — TTFA, RTF, VRAM ve benchmark yöntemi.
-11. [Forge Model Registry](../../kaiwen-forge/docs/MODEL_REGISTRY.md) — model release/manifest doğrulaması.
-12. [Corpus Data Governance](../../kaiwen-corpus/docs/DATA_GOVERNANCE.md) — kişisel veri, ses kaydı ve izin.
+5. [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md) — ortak JSON event envelope ve cross-repo sınırı.
+6. [Workspace Engineering Standards](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ENGINEERING_STANDARDS.md) — sürüm, test, dokümantasyon, güvenlik.
+7. [Workspace Roadmap](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ROADMAP.md) — özellikleri gereksiz genişletmeyen gelişim sırası.
+8. [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md) — bugün mevcut `kaiwen_voice` ile hedef Speech SDK arasındaki sınır.
+9. [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md) — playback stop, cancellation, turn/generation kimliği.
+10. [Speech Performance](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/PERFORMANCE.md) — TTFA, RTF, VRAM ve benchmark yöntemi.
+11. [Forge Model Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md) — model release/manifest doğrulaması.
+12. [Corpus Data Governance](https://github.com/ImtheKaiwen/kaiwen-corpus/blob/3416d57ce0815af0cb8357c6727cd4ba889bd46d/docs/DATA_GOVERNANCE.md) — kişisel veri, ses kaydı ve izin.
 13. [Kaiwen Agent repository](https://github.com/ImtheKaiwen/kaiwen-agent) — SDK'nın gerçek kaynak kodu.
 14. [Agent consumer brief](https://github.com/ImtheKaiwen/kaiwen-agent/blob/main/docs/consumer-agent-brief.md) — ürün adapter'ının güven sınırları.
 15. [Agent unified runtime](https://github.com/ImtheKaiwen/kaiwen-agent/blob/main/docs/unified-runtime.md) — chat/action/workflow ve bileşen olgunluğu.

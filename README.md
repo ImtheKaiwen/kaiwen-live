@@ -5,7 +5,7 @@
 > **Hedef:** Türkçe, öncelikle tek kullanıcı, Windows masaüstü, local-first, düşük gecikmeli voice-to-voice deneyimi.<br>
 > **Durum:** `TASARIM / PLANLAMA` — GitHub reposunda 30 Ekim 2026 incelemesi itibarıyla yalnız kısa başlangıç `README.md` vardır; bu belgede çizilen uygulama, UI, sidecar ve streaming API **henüz geliştirilmemiştir**.<br>
 > **Ana bağımlılıklar:** Kaiwen Speech, sürümlü Forge model release'leri ve isteğe bağlı Kaiwen Agent; UI için Kaiwen Design.<br>
-> **Kanonik belge ilişkisi:** Bu README ürün kapsamını ve uygulama sırasını tanımlar; protokol ayrıntıları [Workspace Integration](../docs/INTEGRATION.md), [Speech Streaming](../kaiwen-speech/docs/STREAMING.md), [Speech API](../kaiwen-speech/docs/API.md), [Forge Registry](../kaiwen-forge/docs/MODEL_REGISTRY.md) belgelerindedir.
+> **Kanonik belge ilişkisi:** Bu README ürün kapsamını ve uygulama sırasını tanımlar; protokol ayrıntıları [Workspace Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md), [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md), [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md), [Forge Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md) belgelerindedir.
 
 > **D1 belge entegrasyonu:** Upstream başlangıç tanımı — “Real-time, speech-native AI assistant powered by Kaiwen Speech and Kaiwen Agent.” — ürün niyeti olarak korunur; iki satırlık orijinal README [`README.upstream-20261030.md`](README.upstream-20261030.md) yolunda byte-for-byte mevcuttur. Bu ana belgede anlatılan Electron uygulaması, sidecar ve streaming API hâlâ **TASARIM / PLANLAMA** durumundadır.
 
@@ -255,7 +255,7 @@ Hoparlörden gelen sesin mikrofona geri dönmesi, kullanıcının konuştuğu sa
 
 ## 9. Oturum ve tur durum makinesi
 
-Kanonik ortak yaşam döngüsü [Integration](../docs/INTEGRATION.md) ile uyumlu olmalı:
+Kanonik ortak yaşam döngüsü [Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md) ile uyumlu olmalı:
 
 ```text
 created → initializing → ready → listening → processing → speaking
@@ -324,7 +324,7 @@ Bu örnek kimlikler test verisidir; gerçek release veya çalışan protokol olm
 | Live → UI | `playback.underrun` | Live device manager | Kullanıcıya kesik ses uyarısı gerekebilir |
 | Sidecar → UI | `runtime.error` | Live supervisor | Tipli hata ve recovery önerisi |
 
-Event isimleri **öneri**; [Speech API](../kaiwen-speech/docs/API.md) ve shared contract testleri üzerinde tek enum hâline getirilecek. Örnek JSON payload, bitstream protokolünü tanımlamaz.
+Event isimleri **öneri**; [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md) ve shared contract testleri üzerinde tek enum hâline getirilecek. Örnek JSON payload, bitstream protokolünü tanımlamaz.
 
 ### 10.2 Backpressure ve sequence güvenilirliği
 
@@ -970,7 +970,7 @@ Kararların değişmesi mümkündür; ancak uyum sözleşmesini etkileyen deği�
 - `docs/DESIGN_AND_UX.md` — Ekran akışı, Design tüketimi, mikro etkileşim, erişilebilirlik. **Henüz oluşturulacak.**
 - `docs/AGENT_INTEGRATION.md` — Agent routing, tool policy, task lifecycle, sesli yanıt sınırları. **Henüz oluşturulacak.**
 
-**İlgili hazır belgeler:** [Workspace Overview](../docs/OVERVIEW.md), [Cross-Repository Integration](../docs/INTEGRATION.md), [Engineering Standards](../docs/ENGINEERING_STANDARDS.md), [Workspace Roadmap](../docs/ROADMAP.md), [Speech Streaming](../kaiwen-speech/docs/STREAMING.md), [Speech API](../kaiwen-speech/docs/API.md), [Speech Performance](../kaiwen-speech/docs/PERFORMANCE.md), [Forge Model Registry](../kaiwen-forge/docs/MODEL_REGISTRY.md), [Corpus Export Contract](../kaiwen-corpus/docs/EXPORT_CONTRACT.md).
+**İlgili hazır belgeler:** [Workspace Overview](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/OVERVIEW.md), [Cross-Repository Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md), [Engineering Standards](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ENGINEERING_STANDARDS.md), [Workspace Roadmap](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ROADMAP.md), [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md), [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md), [Speech Performance](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/PERFORMANCE.md), [Forge Model Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md), [Corpus Export Contract](https://github.com/ImtheKaiwen/kaiwen-corpus/blob/3416d57ce0815af0cb8357c6727cd4ba889bd46d/docs/EXPORT_CONTRACT.md).
 
 Yapılandırma, public API, codec uyumluluğu, event enum veya model release şeması değiştiğinde bir belgede güncelleme yapmak yeterli değildir. Üretici sözleşmesi, tüketici adapter'ı, fixture ve test birlikte güncellenir. `README.md` ürün durumunu yansıtan **yaşayan belgedir**: bir özellik gerçekten uygulandığında statü tablosu kanıt referansıyla değiştirilir; uygulanmadıysa hedef olarak kalır.
 
