@@ -99,8 +99,8 @@ kaiwen-live/
 ├── AGENTS.md
 ├── docs/
 │   ├── ARCHITECTURE.md                # bu belge
-│   ├── DESIGN_AND_UX.md              # ileride yazılacak, henüz yok
-│   ├── AGENT_INTEGRATION.md          # ileride yazılacak, henüz yok
+│   ├── DESIGN_AND_UX.md              # mevcut tasarım belgesi; uygulama planlanıyor
+│   ├── AGENT_INTEGRATION.md          # mevcut tasarım belgesi; Agent köprüsü planlanıyor
 │   └── decisions/                    # yalnız gerçek ADR ihtiyacı doğarsa
 ├── apps/
 │   ├── desktop/
@@ -1233,7 +1233,7 @@ Bu listedeki **doküman yazımı** yalnız tasarım kapısıdır. Test/uygulama 
 - [Design System](https://github.com/ImtheKaiwen/kaiwen-design): UI component/tasarım sorumluluğu.
 - [Agent](https://github.com/ImtheKaiwen/kaiwen-agent): Opsiyonel araç/izin sistemi; entegrasyon çekirdeğe bağlı değil.
 
-Henüz yazılmamış `docs/DESIGN_AND_UX.md` sonraki dosyadır: ilk açılış, mikrofon izinleri, erişilebilir konuşma UI'ı, cihaz ve model seçme, hata mesajları, diagnostic ekranı ve Kaiwen Design bileşenleri. Ondan sonraki `docs/AGENT_INTEGRATION.md` opsiyonel Agent yetki/görev/sonuç köprüsünü tanımlar. Her ikisi de bu belgedeki IPC, streaming ve mahremiyet sınırlarını değiştirecekse sözleşme ve testleriyle birlikte güncellenir.
+`docs/DESIGN_AND_UX.md` mevcut tasarım belgesidir: ilk açılış, mikrofon izinleri, erişilebilir konuşma UI'ı, cihaz ve model seçme, hata mesajları, diagnostic ekranı ve Kaiwen Design bileşenlerini tanımlar. `docs/AGENT_INTEGRATION.md` de mevcut tasarım belgesidir; opsiyonel Agent yetki/görev/sonuç köprüsünü tanımlar. Bu belgelerin mevcut olması UI veya Agent köprüsünün uygulandığı anlamına gelmez. Her ikisi de bu belgedeki IPC, streaming ve mahremiyet sınırlarını değiştirecekse sözleşme ve testleriyle birlikte güncellenir.
 
 ## 36. Sonuç ve değişmez mimari taahhüt
 

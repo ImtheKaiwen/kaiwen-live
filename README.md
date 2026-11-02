@@ -962,13 +962,13 @@ Kararların değişmesi mümkündür; ancak uyum sözleşmesini etkileyen deği�
 
 ## 35. Dokümantasyon haritası ve değişiklik kuralı
 
-**Bu repo için hazırlanan dokümanların planı:**
+**Mevcut dokümantasyon haritası (ürün uygulaması hâlâ planlama aşamasındadır):**
 
 - `README.md` — Ürün konumu, bugünkü gerçek durum, V1 sınırı ve çalışır sisteme geçiş.
-- `AGENTS.md` — Codex/ajanlar için değişiklik, test, güvenlik ve anti-regression kuralları. **Henüz ayrı dosya olarak oluşturulacak.**
-- `docs/ARCHITECTURE.md` — Desktop/sidecar/audio thread/IPC/oturum mimarisinin en ayrıntılı sözleşmesi. **Henüz oluşturulacak.**
-- `docs/DESIGN_AND_UX.md` — Ekran akışı, Design tüketimi, mikro etkileşim, erişilebilirlik. **Henüz oluşturulacak.**
-- `docs/AGENT_INTEGRATION.md` — Agent routing, tool policy, task lifecycle, sesli yanıt sınırları. **Henüz oluşturulacak.**
+- `AGENTS.md` — Codex/ajanlar için değişiklik, test, güvenlik ve anti-regression kuralları. **Mevcut talimat belgesidir; ürün uygulaması hâlâ planlanmaktadır.**
+- `docs/ARCHITECTURE.md` — Desktop/sidecar/audio thread/IPC/oturum mimarisinin en ayrıntılı sözleşmesi. **Mevcut tasarım belgesidir; uygulama henüz geliştirilmemiştir.**
+- `docs/DESIGN_AND_UX.md` — Ekran akışı, Design tüketimi, mikro etkileşim, erişilebilirlik. **Mevcut tasarım belgesidir; uygulama henüz geliştirilmemiştir.**
+- `docs/AGENT_INTEGRATION.md` — Agent routing, tool policy, task lifecycle, sesli yanıt sınırları. **Mevcut tasarım belgesidir; Agent köprüsü henüz uygulanmamıştır.**
 
 **İlgili hazır belgeler:** [Workspace Overview](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/OVERVIEW.md), [Cross-Repository Integration](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/INTEGRATION.md), [Engineering Standards](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ENGINEERING_STANDARDS.md), [Workspace Roadmap](https://github.com/ImtheKaiwen/kaiwen-ai/blob/a2476114c4da048090aeb23a2b03a2ec930b113a/docs/ROADMAP.md), [Speech Streaming](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/STREAMING.md), [Speech API](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/API.md), [Speech Performance](https://github.com/ImtheKaiwen/kaiwen-speech/blob/2dd8ae4ff4970fec13d761afbb5587b887957547/docs/PERFORMANCE.md), [Forge Model Registry](https://github.com/ImtheKaiwen/kaiwen-forge/blob/8bf2af3b925bc1478328b4a26fcba36af74480fb/docs/MODEL_REGISTRY.md), [Corpus Export Contract](https://github.com/ImtheKaiwen/kaiwen-corpus/blob/3416d57ce0815af0cb8357c6727cd4ba889bd46d/docs/EXPORT_CONTRACT.md).
 

@@ -103,9 +103,9 @@ kaiwen-live/
 │   ├── integration/
 │   └── audio-fixtures/
 ├── docs/
-│   ├── ARCHITECTURE.md                  # Sonraki belge; henüz yazılacak
-│   ├── DESIGN_AND_UX.md                 # Sonraki belge; henüz yazılacak
-│   └── AGENT_INTEGRATION.md             # Sonraki belge; henüz yazılacak
+│   ├── ARCHITECTURE.md                  # Mevcut tasarım belgesi; uygulama planlanıyor
+│   ├── DESIGN_AND_UX.md                 # Mevcut tasarım belgesi; uygulama planlanıyor
+│   └── AGENT_INTEGRATION.md             # Mevcut tasarım belgesi; Agent köprüsü planlanıyor
 └── .github/workflows/                   # Başlangıç kalite kapıları
 ```
 
