@@ -1,0 +1,29 @@
+name: Docs Integrity
+
+on:
+  push:
+    branches:
+      - main
+      - docs/kaiwen-ai-integration-20261030
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  docs-integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Run documentation checker tests
+        run: python3 -m unittest discover -s tests -p 'test_check_docs.py' -v
+
+      - name: Check documentation integrity
+        run: python3 scripts/check_docs.py
