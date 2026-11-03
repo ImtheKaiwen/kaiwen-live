@@ -791,7 +791,7 @@ Yeni bir teknolojinin varlığı onu ilk sürüme ekleme gerekçesi değildir. K
 - [ ] Gerçek çalıştırılan test komutları ve CI sonuçları raporlandı.
 - [ ] README, API sözleşmesi, ADR ve statü tablosu gerçek sonucu anlatıyor.
 
-Bu liste **gelecekteki ürün kabul koşullarıdır**; bugünkü tamamlanmış işlerin listesi değildir. Yeni belge dosyası tek başına Live V1 hazır anlamına gelmez. Sıradaki dosya `docs/ARCHITECTURE.md` olacaktır; AGENTS ajan davranışlarını ve kalite sınırlarını, ARCHITECTURE bileşenlerin teknik kontratlarını tanımlar.
+Bu liste **gelecekteki ürün kabul koşullarıdır**; bugünkü tamamlanmış işlerin listesi değildir. Yeni belge dosyası tek başına Live V1 hazır anlamına gelmez. `docs/ARCHITECTURE.md` mevcut mimari tasarım belgesidir; AGENTS ajan davranışlarını ve kalite sınırlarını, ARCHITECTURE bileşenlerin teknik kontratlarını tanımlar.
 
 ---
 
